@@ -6,6 +6,7 @@
 - Open the Terminal or PowerShell.
 
 - Run the command:
+
   ```bash
   ssh-keygen
   ```
@@ -64,19 +65,10 @@
 
 3. Login: console.aws.amazon.com → click on Root user → Signup email/password [aws.amazon](https://aws.amazon.com/free/)
 
-![alt text](Images/awsaccount2.png)
-
-- Next 
-
-![alt text](Images/awsaccount3.png)
-
-## Quick Tips
-
-Track via Billing Console "Free Tier" page; set ₹500 alert. Ideal for your Python/DevOps practice on EC2/Lambda. [aws.amazon](https://aws.amazon.com/free/free-tier-faqs/)
+![aws root user login page](Images/awsaccount2.png)
 
 
-
-# Import SSH Key to AWS Account (for EC2 launch)
+# Import SSH Key(Public key) to AWS Account (for EC2 launch)
 
 - Open AWS Management Console,
   - **Go to EC2** 
@@ -161,7 +153,7 @@ Track via Billing Console "Free Tier" page; set ₹500 alert. Ideal for your Pyt
 ***
 
 
-### Steps to Import SSH Public Key via Azure Portal
+# Steps to Import SSH Public Key via Azure Portal
 
 - To import an existing SSH public key into your Azure cloud account using the Azure Portal follow these steps.
 
@@ -194,8 +186,6 @@ Track via Billing Console "Free Tier" page; set ₹500 alert. Ideal for your Pyt
 6. The resource group was created successfully and the details are displayed as follows:
 
 ![click on review](Images/azure_ssh4.png)
-
-
 
 
 2. **Navigate to SSH Key Management**
