@@ -1,0 +1,120 @@
+# How to create GitHub account
+
+- [Refer Here](https://github.com/) to signup GitHub.
+
+![GitHub Login Page](Images/github1.png)
+
+- To create GitHub account, signup with `gmail` and create `username` 
+
+![Create GitHub account](Images/github2.png)
+
+- After creating github account login page will be like 
+
+![github repo page](Images/github3.png)
+
+## How to add `SSH KEY` to GitHub
+
+- Open settings and click on `SSH and GPG Keys`
+
+![ssh and gpg keys](Images/github4.png)
+
+- Then, Click on `NEW SSH Key`
+
+![new sshkey](Images/github5.png)
+
+- Add `public key` to it and give a `title` and click on `ADD SSH KEY`
+
+![adding ssh key](Images/github6.png)
+
+
+## How to configure GitHub `username` and `gmail` to your system
+
+- To configure your `Git username and email`, use the `git config` command in your terminal or PowerShell. This sets your identity for commits across repositories or per repo.
+
+
+### Global Configuration
+- Run these commands to set your username and email system-wide `(stored in ~/.gitconfig on Linux/Mac` or `%USERPROFILE%\.gitconfig on Windows)`. 
+
+
+```bash
+git config --global user.name "Your User Name"
+
+git config --global user.email "your.email@example.com"
+```
+
+![Replace placeholders with your details](Images/github7.png)
+
+***
+
+- Verify with 
+
+```bash
+git config --global --list or
+git config --get user.name and 
+git config --get user.email
+
+```
+
+## How to create a repository in GitHub 
+
+### usecase 1 
+- Let's creat repository in Git and clone to local system/machine. 
+
+- click on `Create repository` 
+
+![creating repo in gitgub account](Images/github8.png)
+
+- Now, in your system open Terminal 
+
+- Create one folder 
+
+```bash
+mkdir githubpractice
+cd githubpractice
+git clone <SSH URL>
+```
+
+- after cloning cd into the `repo`
+
+![git clone](Images/github10.png)
+
+```bash
+cd entity
+```
+
+- Here, If you want to open 
+    - windows file explorer enter command `start .` 
+    - VS Code enter command `code .`
+
+![git clone and cd to repo](Images/github11.png)
+
+***
+
+- Now, in the repo try to 
+    - `create some files` and 
+    - `add` those files to files to staging area
+    - `commit` all the changes
+
+![github account](Images/github12.png)
+
+***
+
+- To check the connection between your system and GitHub account.
+
+- Run the command 
+```bash
+ssh -T git@github.com  # as shown in the below image
+```
+
+- To push the changes from local repo to remote repo
+
+```bash
+git push
+```
+
+![git push](Images/github13.png)
+
+- all the local changes has pushed to remote as shown in the below image
+
+![github changes](Images/github14.png)
+
