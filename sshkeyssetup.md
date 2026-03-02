@@ -1,7 +1,7 @@
 # How to Generate and Use SSH Keys on Windows for AWS and Azure VMs?
 
 ## How to Generate SSH Keys on a Windows Machine
-#### To Generate SSH Key Pair in Windows
+### To Generate SSH Key Pair in Windows
 
 - Open the Terminal or PowerShell.
 
@@ -28,7 +28,13 @@
 ![ssh keys in terminal and windows file explorer](Images/sshkeys4.png)
 
 - Only you can access it, protecting your private key.
-
+- To read the public and private keys
+   - open `GitBash` 
+   ```bash
+   cd .ssh/  # Change directory to the hidden SSH configuration folder in the user's home directory.
+   cat id_ed25519     # To read/view Private Key
+   cat id_ed25519.pub # To read/view Publick Key
+   ``` 
 
 ![gitbash view](Images/sshkeys5.png)
 
