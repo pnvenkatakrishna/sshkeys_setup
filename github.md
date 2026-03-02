@@ -4,7 +4,7 @@
 
 ![GitHub Login Page](Images/github1.png)
 
-- To create GitHub account, signup with `gmail` and create `username` 
+- To create GitHub account, signup with `email` and create `username` 
 
 ![Create GitHub account](Images/github2.png)
 
