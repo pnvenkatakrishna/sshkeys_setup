@@ -152,11 +152,34 @@ git config --get user.email
 ssh -T git@github.com  # as shown in the below image
 ```
 
-- To push the changes from local repo to remote repo
+## How to Push Changes from Local Git Repository to Remote Repository?
 
-```bash
-git push
-```
+
+### Adding Remote Origin Before Pushing
+
+**"origin"** is the conventional name for your primary remote repository.
+
+1. **Copy remote URL** from GitHub/GitLab repo page (use SSH: `git@github.com:username/repo.git`).
+
+2. **Add remote**:
+   ```
+   git remote add origin git@github.com:username/repo.git
+   ```
+
+3. **Verify**:
+   ```
+   git remote -v
+   ```
+   Shows: `origin git@github.com:username/repo.git (fetch/push)`
+
+4. **Push** (sets upstream tracking):
+   ```
+   git push -u origin main
+   ```
+
+**Result**: Future `git push` or `git pull` works without specifying `origin main`. [theserverside](https://www.theserverside.com/video/How-to-use-the-git-remote-add-origin-command-to-push-remotely)
+
+
 
 ![git push](Images/github13.png)
 

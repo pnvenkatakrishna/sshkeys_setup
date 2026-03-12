@@ -219,7 +219,7 @@
 
 ***
 
-### Additional Tips
+### Additional Tips  
 
 - You can copy your public key again later by clicking on the key you uploaded and using the **Copy to clipboard** option.
 - The uploaded public key can now be selected as an authentication method when creating or connecting to Linux VMs.
