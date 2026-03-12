@@ -22,7 +22,15 @@
 
 ![new sshkey](Images/github5.png)
 
-- Add `public key` to it and give a `title` and click on `ADD SSH KEY`
+
+- [Refer Here](https://github.com/pnvenkatakrishna/sshkeys_setup/blob/main/sshkeyssetup.md) to understand **ssh keys generation**
+
+- Here to add `public key`, open your `GitBash` and check as shown in the below image. 
+
+![pub and private key to read](Images/sshkeys5.png)
+
+- Add `public key` in the `key section` and give a `title`. 
+    - click on `ADD SSH KEY`
 
 ![adding ssh key](Images/github6.png)
 
@@ -55,18 +63,42 @@ git config --get user.email
 
 ```
 
-## How to create a repository in GitHub 
+## How to create a repository in GitHub (Remote Repository)
 
-### usecase 1 
+
 - Let's creat repository in Git and clone to local system/machine. 
 
 - click on `Create repository` 
 
 ![creating repo in gitgub account](Images/github8.png)
 
-- Now, in your system open Terminal 
 
-- Create one folder 
+
+- When creating a remote repository on platforms like GitHub, GitLab, or Bitbucket, the repository page displays **two clone URLs**: HTTPS and SSH.
+
+## HTTPS URL Format
+```
+https://github.com/username/repository.git
+```
+- Uses username/password or personal access token (PAT) for authentication.
+- Prompts for credentials on each push/pull (unless cached).
+- Works everywhere without SSH setup.
+
+## SSH URL Format
+```
+git@github.com:username/repository.git
+```
+- Requires SSH key setup (public key added to your account).
+- Passwordless authentication via your private key.
+- Faster/more secure for frequent operations.
+
+
+![https and ssh](Images/github8.1.png)
+
+
+### usecase 1: cloning remote repo to local
+
+- open Terminal, Create one folder and `cd into the folder`
 
 ```bash
 mkdir githubpractice

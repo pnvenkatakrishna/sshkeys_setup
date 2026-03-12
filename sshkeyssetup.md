@@ -1,7 +1,6 @@
-# How to Generate and Use SSH Keys on Windows for AWS and Azure VMs?
+# How to Generate SSH Keys on a Windows Machine
 
-## How to Generate SSH Keys on a Windows Machine
-### To Generate SSH Key Pair in Windows
+## To Generate SSH Key Pair in Windows
 
 - Open the Terminal or PowerShell.
 
@@ -41,38 +40,25 @@
 - AWS and Azure expect keys to be stored or used from here.
 ***
 
+# How to Configure Locally Generated SSH Keys for AWS and Azure VMs on Windows?
 
-# Importing SSH Keys to AWS and Azure Cloud Accounts
+## Configuring Locally Generated SSH Keys for AWS and Azure VMs on Windows (as shown in below image)
 
 ![keys to aws and azure](Images/sshkeys3.png)
 
+***
 
+# How to Configure Locally Generated SSH Keys for AWS EC2 Instances on Windows?
 
-## AWS Free Plan Details
+### To configure locally generated SSH keys for AWS EC2 instances on Windows.
 
-- AWS Free Tier for new accounts offers a Free Plan with up to $200 USD credits ($100 at signup + $100 earned via service exploration) valid for 6 months or until depleted. [aws.amazon](https://aws.amazon.com/free/)
+- Login: [aws.amazon](https://aws.amazon.com/free/) 
 
-- No charges during 6 months unless you upgrade to Paid Plan (one-click in console).
+![sign up to console](Images/awsaccount1.1.png)
 
-- Access to select popular services (e.g., EC2 t3.micro 750 hrs/mo, Lambda 1M requests, S3 5GB). [aws.amazon](https://aws.amazon.com/free/free-tier-faqs/)
-
-- Always-free offers on 30+ services continue indefinitely after (monthly quotas reset). [aws.amazon](https://aws.amazon.com/free/free-tier-faqs/)
-
-- Auto-closes after 6 months + 90-day grace if not upgraded; one per customer. [aws.amazon](https://aws.amazon.com/about-aws/whats-new/2025/07/aws-free-tier-credits-month-free-plan/)
-
-
-## Signup & Login
-1. aws.amazon.com/free → "Create Free Account" → New email, password, billing (₹2 India verification, refunded).
-
-![aws create page](Images/awsaccount1.png)
-
-2. Verify email/phone → Select Free Plan/Basic Support → Activate. [aws.amazon](https://aws.amazon.com/free/free-tier-faqs/)
-
-
-3. Login: console.aws.amazon.com → click on Root user → Signup email/password [aws.amazon](https://aws.amazon.com/free/)
+- click on `Sign in using root user email`(as shownin in below image) 
 
 ![aws root user login page](Images/awsaccount2.png)
-
 
 # Import SSH Key(Public key) to AWS Account (for EC2 launch)
 
@@ -94,6 +80,9 @@
 
 ![importing a new keypair](Images/awsssh4.png)
 
+- finally it looks as shown in the below image.
+
+![keypairs section](Images/awsssh5.png)
 
 ## Summary:
 
@@ -110,11 +99,8 @@
 ***
 
 **NOTE:**
-- When launching a new EC2 instance, select your imported key pair in the Key Pair section.
+- **When launching an EC2 instance, your imported key pair appears in the Key pair dropdown under the Key pair section of the launch wizard. This lets you select it during configuration before final launch.**
 ***
-
-
-
 
 
 ## How to Launch AWS Ubuntu Instance with Imported Key
@@ -146,6 +132,7 @@
 ![launching instance](Images/ec2aws5.png)
 
 9. Wait for the instance to enter the "running" state.
+
 10. Note the public IP address of the instance for SSH access.
 
 ![Launching instance](Images/ec2aws6.png)
@@ -156,6 +143,10 @@
  ssh ubuntu@43.204.98.223
 ```
 ![login to instance](Images/ec2aws7.png)
+
+
+
+
 ***
 
 
@@ -185,6 +176,7 @@
    - **Region:** Select the Azure region where you want the resource group to reside.
 
 4. Click **Review + create**.
+
 5. After validation succeeds, click **Create**.
 
 ![choosing above all](Images/azure_ssh3.png)
@@ -197,19 +189,30 @@
 2. **Navigate to SSH Key Management**
    - In the left menu or the search bar, type and select **SSH keys** or head to **Azure Home > SSH keys** (sometimes under "Security + Networking" or can be searched directly).
 
+
+   ![searching ssh keys in azure](Images/azure_ssh5.png)
+
 3. **Add SSH Key**
    - Click on **+ Add** or **Create** (may appear as “+ Add SSH key” or “+ Create SSH key”).
 
+
+![alt text](Images/azure_ssh5.1.png)
+
 4. **Configure SSH Key Details**
+
+   - **Subscription:** Select your Azure subscription.
+   - **Resource group** choose the **Resource group name** which you have created.
    - **Region:** Select a region. Azure just stores the key metadata here; you can use the key in all regions.
    - **Key pair name:** Enter a meaningful, unique name for this key (for tracking and selection purposes).
    - **SSH public key source:** Choose “Upload existing public key” (not generate new).
 
 5. **Paste the Public Key**
-   - In the upload field, paste the entire contents of your existing SSH public key file (for example, contents of `id_rsa.pub` or `id_ed25519.pub`). Remove any extra whitespace.
+   - In the upload field, paste the entire contents of your existing SSH public key file (for example, contents of `id_rsa.pub` or `id_ed25519.pub`). (Remove any extra whitespace)
 
 6. **Review + Create**
    - Click **Review + create**. Azure runs validation on the input.
+
+![alt text](Images/azure_ssh6.png)
 
 7. **Create and Finish**
    - Once validation passes, click **Create**. The SSH public key is now stored in your Azure account and available for assigning to virtual machines or other resources when needed.
