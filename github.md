@@ -177,9 +177,6 @@ ssh -T git@github.com  # as shown in the below image
    git push -u origin main
    ```
 
-**Result**: Future `git push` or `git pull` works without specifying `origin main`. [theserverside](https://www.theserverside.com/video/How-to-use-the-git-remote-add-origin-command-to-push-remotely)
-
-
 
 ![git push](Images/github13.png)
 
