@@ -179,11 +179,3 @@ ssh -T git@github.com  # as shown in the below image
 
 
 
-![git push](Images/github13.png)
-
-- all the local changes has pushed to remote as shown in the below image
-
-![github changes](Images/github14.png)
-
-
-
